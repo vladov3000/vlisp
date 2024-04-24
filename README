@@ -1,0 +1,20 @@
+vlisp - Vlad's List Processor
+
+  vlisp is an implementation of a tiny scheme-like programming language. It is
+complete enough to run all the exercises in chapter one of "The Structure and
+Interpretation of Computer Programs."
+
+== Usage ==
+
+  vlisp targets Linux, but will also likely work on MacOS. After confirming gcc
+is installed, run "./build.sh". The resulting executable will be in
+"build/vlisp".
+
+  To evaluate all terms in a file, run "vlisp path/to/file".
+
+== Limitations ==
+
+  The implementation is a slow tree-walking interpreter. There is no garbage
+collection; all terms are bump allocated on one memory arena until the end of
+the program. There is also no real error handling, however there are "assert"s
+to ensure no undefined behavior is encountered.
